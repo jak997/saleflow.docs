@@ -1,0 +1,8 @@
+﻿################################################################################
+# Il file gitignore è stato creato automaticamente da Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/SaleFlow.Docs/.vs/SaleFlow.Docs.slnx
+/SaleFlow.Docs/Api/bin/Debug/net10.0
+/SaleFlow.Docs/Api/obj
