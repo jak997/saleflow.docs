@@ -1,3 +1,6 @@
 <Solution>
   <Project Path="Api/Api.csproj" />
+  <Project Path="BLL/BLL.csproj" />
+  <Project Path="DAL/DAL.csproj" />
+  <Project Path="Entities/Entities.csproj" />
 </Solution>
