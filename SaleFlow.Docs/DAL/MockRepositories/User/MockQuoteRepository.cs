@@ -7,7 +7,7 @@ namespace DAL.Repositories.Mock
 {
     public class MockQuoteRepository : IQuoteRepository
     {
-        List<User> fakeDbSet = new List<Entities.User>
+        List<Quote> fakeDbSet = new List<Entities.Quote>
             {
             //todo
         };
@@ -16,12 +16,12 @@ namespace DAL.Repositories.Mock
         {
         }
 
-        public void Add(User entity)
+        public void Add(Quote entity)
         {
             Console.WriteLine("MockQuoteRepository.Add");
         }
 
-        public void Delete(User entity)
+        public void Delete(Quote entity)
         {
             throw new NotImplementedException();
         }
@@ -31,7 +31,7 @@ namespace DAL.Repositories.Mock
             return Task.Delay(1000);
         }
 
-        public void Update(User entity)
+        public void Update(Quote entity)
         {
             throw new NotImplementedException(); 
         }
