@@ -9,8 +9,9 @@ namespace Entities
         public Proforma()
         {
             Type = Core.DocumentTypeEnum.Proforma;
-            Status = ProformaStatusEnum.Draft
-        };
+            Status = ProformaStatusEnum.Draft;
+        }
+
         public required string BillingAddress { get; set; }
         public required string ParentQuoteId { get; set; }
         public required ProformaStatusEnum Status { get; set; }

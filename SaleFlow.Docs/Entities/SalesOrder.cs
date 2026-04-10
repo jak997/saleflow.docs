@@ -10,11 +10,14 @@ namespace Entities
         {
             Type = Core.DocumentTypeEnum.SalesOrder;
             Status = SalesOrderStatusEnum.Draft;
-        };
+        }
+
         public required string ShippingAddress { get; set; }
         public required string ParentQuoteId { get; set; }
-        public required SalesOrderStatusEnum Status { get; set;
-    }
+        public required SalesOrderStatusEnum Status
+        {
+            get; set;
+        }
 
         public enum SalesOrderStatusEnum : int
         {
@@ -23,3 +26,4 @@ namespace Entities
             Completed = 2,
         }
     }
+}

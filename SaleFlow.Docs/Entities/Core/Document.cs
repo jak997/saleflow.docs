@@ -36,6 +36,6 @@ namespace Entities.Core
     {
         Quote = 0,
         SalesOrder = 1,
-        Invoice = 2,
+        Proforma = 2,
     }
 }

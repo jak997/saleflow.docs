@@ -10,8 +10,8 @@ namespace Entities
         public Quote()
         {
             Type = Core.DocumentTypeEnum.Quote;
-            Status = QuoteStatusEnum.Draft
-        };
+            Status = QuoteStatusEnum.Draft;
+        }
         public required QuoteStatusEnum Status { get; set; }
     }
 
