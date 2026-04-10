@@ -5,10 +5,10 @@ using System.Text;
 
 namespace BLL.Services.Core
 {
-    public abstract class ConnectedBaseService<TRepository> : EnvironmentBaseService
+    public abstract class ConnectedBaseService<TRepository>
     {
         internal TRepository _repository;
-        protected ConnectedBaseService(Configuration config, TRepository repository) : base(config)
+        protected ConnectedBaseService(TRepository repository)
         {
             _repository = repository;
         }

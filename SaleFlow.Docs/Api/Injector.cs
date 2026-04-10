@@ -6,17 +6,16 @@ public static class Injector
     public static IServiceCollection DoBLLClassesInjection(this IServiceCollection services, bool useMockRepos )
     {
         //services
-        services.AddScoped<IAuthenticationService, AuthenticationService>();
-        services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IQuoteService, QuoteService>();
 
         //repos
         if (!useMockRepos)
         {
-            services.AddScoped<IUserRepository, DAL.Repositories.UserRepository>();
+            services.AddScoped<IQuoteRepository, DAL.Repositories.QuoteRepository>();
         }
         else
         {
-            services.AddScoped<IUserRepository, DAL.Repositories.Mock.MockUserRepository>();
+            services.AddScoped<IQuoteRepository, DAL.Repositories.Mock.MockQuoteRepository>();
         }
  
         return services;
