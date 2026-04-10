@@ -23,7 +23,7 @@ namespace Entities.Core
         public Guid version;
 
     }
-    public abstract class Item : BaseUniqueIdentifiedEntity
+    public  class Item : BaseUniqueIdentifiedEntity
     {
         public required string Code { get; set; }
         public string Description { get; set; }

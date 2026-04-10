@@ -1,0 +1,80 @@
+Authorized Post Test
+
+Invoke-RestMethod -Uri "https://localhost:7303/Api/Quote/AuthorizedPostTest" `
+  -Method Post `
+  -Headers @{ Authorization = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1TWFzdHJvc3NvIiwianRpIjoiZTUzNGE1ODYtYjEyMS00NTY4LThlM2YtODkzN2VkNDYzNjkzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidGVzdF9yb2xlIiwiZXhwIjoxNzc1Nzc1MzkwLCJpc3MiOiJhcGkuc2FsZWZsb3cuYXV0aCIsImF1ZCI6ImFwaS5zYWxlZmxvdyJ9.yo8dBAAEM1GyvAvOGP386K0Z2ACNUz_pdPs22U1c7cQ" }
+
+
+  Creazione preventivo valido
+
+  Invoke-RestMethod -Uri "https://localhost:7303/Api/Quote/Create" `
+  -Method Post `
+  -Headers @{
+      Authorization = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1TWFzdHJvc3NvIiwianRpIjoiZThhMzBiNTMtNjZiNC00NjRiLWFlOGEtNWI1N2Q4YzJhYWU0IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidGVzdF9yb2xlIiwiZXhwIjoxNzc1ODQzOTkzLCJpc3MiOiJhcGkuc2FsZWZsb3cuYXV0aCIsImF1ZCI6ImFwaS5zYWxlZmxvdyJ9.beS_GNucMkUIEklw7df6FdfBjmGMqe8ZvxASOPNeSzQ"
+      "Content-Type" = "application/json"
+  } `
+  -Body '{
+    "Id": "00000000-0000-0000-0000-000000000000",
+    "Type": 0,
+    "Number": "QT-2026-001",
+    "Description": "Preventivo di test via PowerShell",
+    "CustomerId": "CUST-99",
+    "Items": [
+        {
+            "Id": "00000000-0000-0000-0000-000000000000",
+            "Code": "PROD-01",
+            "Description": "Licenza Software Cloud",
+            "Price": 1500.50,
+            "Units": 1
+        },
+        {
+            "Id": "00000000-0000-0000-0000-000000000000",
+            "Code": "SRV-02",
+            "Description": "Setup Iniziale",
+            "Price": 500.00,
+            "Units": 2
+        }
+    ],
+    "TotalUnits": 3,
+    "TotalPrice": 2500.50,
+    "Currency": "EUR",
+    "Status": 0,
+    "Version": "00000000-0000-0000-0000-000000000000"
+}'
+
+
+  Creazione preventivo invalido
+
+  Invoke-RestMethod -Uri "https://localhost:7303/Api/Quote/Create" `
+  -Method Post `
+  -Headers @{
+      Authorization = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1TWFzdHJvc3NvIiwianRpIjoiZThhMzBiNTMtNjZiNC00NjRiLWFlOGEtNWI1N2Q4YzJhYWU0IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidGVzdF9yb2xlIiwiZXhwIjoxNzc1ODQzOTkzLCJpc3MiOiJhcGkuc2FsZWZsb3cuYXV0aCIsImF1ZCI6ImFwaS5zYWxlZmxvdyJ9.beS_GNucMkUIEklw7df6FdfBjmGMqe8ZvxASOPNeSzQ"
+      "Content-Type" = "application/json"
+  } `
+  -Body '{
+    "Id": "00000000-0000-0000-0000-000000000000",
+    "Type": 1,
+    "Number": "",
+    "Description": "Preventivo di test via PowerShell",
+    "CustomerId": "CUST-99",
+    "Items": [
+        {
+            "Id": "00000000-0000-0000-0000-000000000000",
+            "Code": "PROD-01",
+            "Description": "Licenza Software Cloud",
+            "Price": 1500.50,
+            "Units": 1
+        },
+        {
+            "Id": "00000000-0000-0000-0000-000000000000",
+            "Code": "SRV-02",
+            "Description": "Setup Iniziale",
+            "Price": 500.00,
+            "Units": 2
+        }
+    ],
+    "TotalUnits": 3,
+    "TotalPrice": 2500.50,
+    "Currency": "EUR",
+    "Status": 0,
+    "Version": "00000000-0000-0000-0000-000000000000"

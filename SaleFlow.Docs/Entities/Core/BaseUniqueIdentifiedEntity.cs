@@ -6,7 +6,7 @@ namespace Entities.Core
 {
     public class BaseUniqueIdentifiedEntity
     {
-        public required string Id { get; set; }
+        public string Id { get; set; }
 
     }
 }

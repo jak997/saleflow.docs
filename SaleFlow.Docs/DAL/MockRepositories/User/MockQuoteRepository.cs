@@ -18,7 +18,7 @@ namespace DAL.Repositories.Mock
 
         public void Add(User entity)
         {
-            throw new NotImplementedException();      //todo
+            Console.WriteLine("MockQuoteRepository.Add");
         }
 
         public void Delete(User entity)
@@ -28,7 +28,7 @@ namespace DAL.Repositories.Mock
 
         public Task SaveChangesAsync()
         {
-            throw new NotImplementedException();     //todo
+            return Task.Delay(1000);
         }
 
         public void Update(User entity)

@@ -13,8 +13,9 @@ namespace Api.Controllers
 
 
         [HttpPost("Create")]
-        public void Create() //todo 
+        public async Task Create(BLL.DTO.Quote quote) //todo 
         {
+             await this._service.Create(quote);
         }
 
         [HttpPost("AuthorizedPostTest")]
