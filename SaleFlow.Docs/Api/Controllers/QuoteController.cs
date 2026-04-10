@@ -16,5 +16,10 @@ namespace Api.Controllers
         public void Create() //todo 
         {
         }
+
+        [HttpPost("AuthorizedPostTest")]
+        public void AuthorizedPostTest() //todo 
+        {
+        }
     }
 }
